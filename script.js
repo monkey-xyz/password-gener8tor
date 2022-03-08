@@ -13,14 +13,13 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-const passwordCreation = [];
-
 function generatePassword() {
-  var ignore = '';
+  const passwordCreation = [];
+  var passFinal = "";
   var passwordVariables = 4;
     var lengthCheck = prompt("How many characters would you like?"); {
       if (lengthCheck <= 15) {
-        lengthCheck = "";
+        alert("Your chosen length: " + lengthCheck)
       } else if (lengthCheck > 15) {
         alert("Please enter a smaller number.")
       } else {
@@ -51,11 +50,10 @@ function generatePassword() {
       } else {
         alert("Thank you! Onto the next choice..");
       }
-    for (var i = 0; i < passwordCreation; i++) {
-      var passSelection = Math.floor(Math.random() * passwordCreation.length);
-      password += passwordCreation.substring(passSelection, passSelection +1)
-    }
-    return password;
-}
+    var passGeneration = passwordCreation.join('');
 
-console.log(passwordCreation);
+    for (i = 0; i < lengthCheck; i++) {
+      passFinal += passGeneration.charAt(Math.floor(Math.random) * passGeneration.length);
+    }
+    return passFinal;
+}
