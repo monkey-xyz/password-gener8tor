@@ -48,12 +48,12 @@ function generatePassword() {
       if (numberCheck == true) {
         passwordCreation.push("1234567890");
       } else {
-        alert("Thank you! Onto the next choice..");
+        alert("Thank you! Generating..");
       }
-    var passGeneration = passwordCreation.join('');
+    const passGeneration = passwordCreation.join('');
 
-    for (i = 0; i < lengthCheck; i++) {
-      passFinal += passGeneration.charAt(Math.floor(Math.random) * passGeneration.length);
+    for (var i = 0; i < lengthCheck; i++) {
+      passFinal += passGeneration.charAt(Math.floor(Math.random() * passGeneration.length));
     }
     return passFinal;
 }
