@@ -15,15 +15,35 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
     var lengthCheck = prompt("How many characters would you like?"); {
-      if (lengthCheck.isInteger === true) {
+      if (lengthCheck < 15) {
         
       } else {
         alert("Please enter a real number.")
       }
     }
     var symbolCheck = confirm("Would you like special characters?");
+      if (true) {
+        var symbolsChar = ["!'#$%&*()+,./:;<=>?@[]^_`~{}"];
+      } else {
+        ignore
+      }
     var uppercaseCheck = confirm("Would you like uppercase characters?");
+      if (true) {
+        var uppercaseChar = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+      } else {
+        ignore
+      }
     var lowercaseCheck = confirm("Would you like lowercase characters?");
+      if (true) {
+        var lowercaseChar = ["abcdefghijklmnopqrstuvwxyz"];
+      } else {
+        ignore
+      }
     var numberCheck = confirm("Would you like numbers?");
+      if (true) {
+        var numbersChar = ["1234567890"]
+      } else {
+        ignore
+      }
   return;
 }
