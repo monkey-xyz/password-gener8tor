@@ -13,37 +13,49 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+const passwordCreation = [];
+
 function generatePassword() {
+  var ignore = '';
+  var passwordVariables = 4;
     var lengthCheck = prompt("How many characters would you like?"); {
-      if (lengthCheck < 15) {
-        
+      if (lengthCheck <= 15) {
+        lengthCheck = "";
+      } else if (lengthCheck > 15) {
+        alert("Please enter a smaller number.")
       } else {
         alert("Please enter a real number.")
       }
     }
     var symbolCheck = confirm("Would you like special characters?");
-      if (true) {
-        var symbolsChar = ["!'#$%&*()+,./:;<=>?@[]^_`~{}"];
+      if (symbolCheck == true) {
+        passwordCreation.push("!'#$%&*()+,./:;<=>?@[]^_`~{}");
       } else {
-        ignore
+        alert("Thank you! Onto the next choice..");
       }
     var uppercaseCheck = confirm("Would you like uppercase characters?");
-      if (true) {
-        var uppercaseChar = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+      if (uppercaseCheck == true) {
+        passwordCreation.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
       } else {
-        ignore
+        alert("Thank you! Onto the next choice..");
       }
     var lowercaseCheck = confirm("Would you like lowercase characters?");
-      if (true) {
-        var lowercaseChar = ["abcdefghijklmnopqrstuvwxyz"];
+      if ( lowercaseCheck == true) {
+        passwordCreation.push("abcdefghijklmnopqrstuvwxyz");
       } else {
-        ignore
+        alert("Thank you! Onto the next choice..");
       }
     var numberCheck = confirm("Would you like numbers?");
-      if (true) {
-        var numbersChar = ["1234567890"]
+      if (numberCheck == true) {
+        passwordCreation.push("1234567890");
       } else {
-        ignore
+        alert("Thank you! Onto the next choice..");
       }
-  return;
+    for (var i = 0; i < passwordCreation; i++) {
+      var passSelection = Math.floor(Math.random() * passwordCreation.length);
+      password += passwordCreation.substring(passSelection, passSelection +1)
+    }
+    return password;
 }
+
+console.log(passwordCreation);
