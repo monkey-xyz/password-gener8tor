@@ -4,8 +4,12 @@ This project is about creating a code for a premade template in order to create 
 
 ## About the Project
 
-The HTML and CSS in this project was premade in order to optimize the Javascript coding that was desired. The user story requested that the generator be able to create strong passwords fitting the criteria that the user (employee) inputs into the dialog that appears at the top of the browser. 
+[Password Generator](https://pldbrja.github.io/password-gener8tor/)
+
+The HTML and CSS in this project was premade in order to focus on just the Javascript coding that was desired. The user story requested that the generator be able to create strong passwords fitting the criteria that the user (employee) inputs into the dialog that appears at the top of the browser. 
+
+Upon answering any of the confirm boxes with a "cancel" button, it will return a small alert dialog before redirecting to the next question.
 
 ## Screenshots
 
-TBA
+![Password Generator with a box inbetween a heading and red button.](./assets/site-screenshot.png)

@@ -18,12 +18,17 @@ function generatePassword() {
   var passFinal = "";
   var passwordVariables = 4;
     var lengthCheck = prompt("How many characters would you like?"); {
-      if (lengthCheck <= 15) {
+      if (lengthCheck >= 8) {
         alert("Your chosen length: " + lengthCheck)
-      } else if (lengthCheck > 15) {
+      } else if (lengthCheck > 128) {
         alert("Please enter a smaller number.")
+        return;
+      } else if (lengthCheck < 8) {
+        alert("Please enter a higher number.")
+        return;
       } else {
         alert("Please enter a real number.")
+        return;
       }
     }
     var symbolCheck = confirm("Would you like special characters?");
@@ -47,8 +52,9 @@ function generatePassword() {
     var numberCheck = confirm("Would you like numbers?");
       if (numberCheck == true) {
         passwordCreation.push("1234567890");
+        alert("Generating..")
       } else {
-        alert("Thank you! Generating..");
+        alert("Generating..");
       }
     const passGeneration = passwordCreation.join('');
 
